@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "pQcTLVabLfrVyxbZf0pg3NzHrK1ugb7UPPLHGdDO8b6JAHwT/gShya1IR+APzf+JVseNRoHLziu98EnkdM2l1A==",
+  "success": true,
+  "projectFilePath": "/Users/ahmetzekieymur/Documents/VisualStudio/EcommerceTemplate/github/EcommerceTemplate.iOS/EcommerceTemplate.iOS.csproj",
+  "expectedPackageFiles": [
+    "/Users/ahmetzekieymur/.nuget/packages/carouselview.formsplugin/6.0.0/carouselview.formsplugin.6.0.0.nupkg.sha512",
+    "/Users/ahmetzekieymur/.nuget/packages/system.componentmodel/4.3.0/system.componentmodel.4.3.0.nupkg.sha512",
+    "/Users/ahmetzekieymur/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/ahmetzekieymur/.nuget/packages/xamarin.essentials/1.7.0/xamarin.essentials.1.7.0.nupkg.sha512",
+    "/Users/ahmetzekieymur/.nuget/packages/xamarin.forms/5.0.0.2196/xamarin.forms.5.0.0.2196.nupkg.sha512",
+    "/Users/ahmetzekieymur/.nuget/packages/xamarin.forms.pancakeview/2.3.0.759/xamarin.forms.pancakeview.2.3.0.759.nupkg.sha512"
+  ],
+  "logs": []
+}
