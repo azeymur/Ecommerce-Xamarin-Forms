@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="X5k-f2-b5h">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="gAE-YM-kbH">
+            <objects>
+                <viewController id="X5k-f2-b5h" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y8P-hJ-Z43"/>
+                        <viewControllerLayoutGuide type="bottom" id="9ZL-r4-8FZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yd7-JS-zBw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR BRAND" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxC-12-dga">
+                                <rect key="frame" x="40" y="433" width="334" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your slogan to here." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8S-vP-Mr6">
+                                <rect key="frame" x="40" y="471" width="334" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spa" translatesAutoresizingMaskIntoConstraints="NO" id="ef7-px-SCO">
+                                <rect key="frame" x="132" y="275" width="150" height="150"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="MXP-ef-WzC"/>
+                                    <constraint firstAttribute="height" constant="150" id="uXS-bR-1vC"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.48627450980392156" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TxC-12-dga" firstAttribute="top" secondItem="ef7-px-SCO" secondAttribute="bottom" constant="8" symbolic="YES" id="3iX-HE-wRT"/>
+                            <constraint firstItem="U8S-vP-Mr6" firstAttribute="leading" secondItem="yd7-JS-zBw" secondAttribute="leadingMargin" constant="20" id="541-D6-A3B"/>
+                            <constraint firstItem="ef7-px-SCO" firstAttribute="centerX" secondItem="yd7-JS-zBw" secondAttribute="centerX" id="54A-xR-jCx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TxC-12-dga" secondAttribute="trailing" constant="20" id="58M-7o-bJ2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="U8S-vP-Mr6" secondAttribute="trailing" constant="20" id="9sk-6g-xED"/>
+                            <constraint firstItem="TxC-12-dga" firstAttribute="centerY" secondItem="yd7-JS-zBw" secondAttribute="centerY" id="KlA-X9-j6X"/>
+                            <constraint firstItem="TxC-12-dga" firstAttribute="leading" secondItem="yd7-JS-zBw" secondAttribute="leadingMargin" constant="20" id="LM3-Ig-Aog"/>
+                            <constraint firstItem="U8S-vP-Mr6" firstAttribute="top" secondItem="TxC-12-dga" secondAttribute="bottom" constant="8" symbolic="YES" id="hT7-qe-Xny"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XAI-xm-WK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="349" y="339"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="spa" width="600" height="600"/>
+    </resources>
+</document>

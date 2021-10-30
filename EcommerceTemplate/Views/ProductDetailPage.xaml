@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EcommerceTemplate.Views.ProductDetailPage"
+             xmlns:vm="clr-namespace:EcommerceTemplate.ViewModels"
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:md="clr-namespace:EcommerceTemplate.MaterialDesign"
+             xmlns:converter="clr-namespace:EcommerceTemplate.Converters"
+             xmlns:res="clr-namespace:EcommerceTemplate.Resources"
+             xmlns:template="clr-namespace:EcommerceTemplate.ControlTemplates"
+             xmlns:custom="clr-namespace:EcommerceTemplate.CustomViews"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             Title="{Binding Title}" BackgroundColor="{AppThemeBinding Dark={StaticResource BackgroundColorDark},
+                Light={StaticResource BackgroundColorLight}}">
+
+    <ContentPage.Resources>
+        <converter:FavoriteConverter x:Key="FavoriteConverter"/>
+    </ContentPage.Resources>
+
+    <RelativeLayout>
+
+        <ScrollView RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                        Property=Width, Factor=1}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                        Property=Height, Factor=1}">
+
+            <StackLayout Spacing="10">
+
+                <pv:PancakeView CornerRadius="0, 0, 20, 20">
+
+                    <Grid RowDefinitions="90,*,Auto"
+                          ColumnDefinitions="90,*,90"
+                          HeightRequest="{Binding Source={RelativeSource Self}, Path=Width}">
+
+                        <CarouselView Grid.RowSpan="3"
+                                      Grid.ColumnSpan="3"
+                                      IndicatorView="imagesIndicator"
+                                      ItemsSource="{Binding Images}"
+                                      HorizontalScrollBarVisibility="Never"
+                                      CurrentItemChangedCommand="{Binding ImageChangedCommand}"
+                                      CurrentItemChangedCommandParameter="{Binding Source={RelativeSource Self}, Path=CurrentItem}">
+
+                            <CarouselView.ItemTemplate>
+
+                                <DataTemplate>
+
+                                    <Image Source="{Binding .}"
+                                           Aspect="AspectFill" />
+
+                                </DataTemplate>
+
+                            </CarouselView.ItemTemplate>
+
+                        </CarouselView>
+
+                        <IndicatorView x:Name="imagesIndicator"
+                                       IndicatorColor="DarkGray"
+                                       SelectedIndicatorColor="{AppThemeBinding Light={StaticResource PrimaryColorLight},
+                                            Dark={StaticResource PrimaryColorDark}}"
+                                       Grid.Column="1"
+                                       Grid.Row="2"
+                                       Margin="10" />
+
+                        <Label x:Name="lbFavorite"
+                               x:FieldModifier="public"
+                               Text="{x:Static md:Icons.Favorite}"
+                               IsVisible="{Binding IsFavorite}"
+                               TextColor="{AppThemeBinding Light={StaticResource PrimaryColorLight},
+                                    Dark={StaticResource PrimaryColorDark}}"
+                               FontFamily="Material"
+                               FontSize="40"
+                               VerticalTextAlignment="Center"
+                               HorizontalTextAlignment="Center"
+                               Grid.Column="2"
+                               Grid.Row="0" />
+
+                    </Grid>
+
+                </pv:PancakeView>
+
+                <Label Text="{Binding Name}"
+                       Style="{StaticResource BoldTitlePrimaryLabelStyle}"
+                       HorizontalOptions="StartAndExpand"
+                       VerticalOptions="Center"
+                       Padding="15, 0, 15, 0" />
+
+                <StackLayout Orientation="Horizontal"
+                             Spacing="0"
+                             Margin="15, 0, 15, 0">
+
+                    <template:RatingStars Rating="{Binding AverageRating}"
+                                          ControlTemplate="{StaticResource RatingStarsControlTemplate}"
+                                          StarSize="24" />
+
+                    <Label Text="{Binding RatingCount, StringFormat='({0})'}"
+                           Style="{StaticResource MediumSecondaryLabelStyle}" />
+
+                    <Label Text="{x:Static res:AppResources.ShowReviews}"
+                           FontSize="Medium"
+                           TextColor="{AppThemeBinding Light={StaticResource PrimaryColorLight},
+                                Dark={StaticResource PrimaryColorDark}}"
+                           TextDecorations="Underline"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="EndAndExpand">
+
+                        <Label.GestureRecognizers>
+
+                            <TapGestureRecognizer NumberOfTapsRequired="1"
+                                                  Command="{Binding RatingsCommand}" />
+
+                        </Label.GestureRecognizers>
+
+                    </Label>
+
+                </StackLayout>
+
+                <CollectionView ItemsSource="{Binding SizeValues}"
+                                SelectionMode="None"
+                                HeightRequest="40"
+                                Margin="5"
+                                IsVisible="{Binding IsSimple}">
+
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal" />
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.ItemTemplate>
+
+                        <DataTemplate>
+
+                            <ContentView Padding="5">
+
+                                <pv:PancakeView x:DataType="vm:VariantViewModel"
+                                                CornerRadius="10"
+                                                Padding="5"
+                                                BackgroundColor="{Binding BackgroundColor}">
+
+                                    <Label Text="{Binding Value}"
+                                           TextColor="{Binding TextColor}"
+                                           TextDecorations="{Binding TextDecoration}"
+                                           FontSize="Small"
+                                           HorizontalTextAlignment="Center"
+                                           VerticalTextAlignment="Center"
+                                           WidthRequest="40" />
+
+                                    <pv:PancakeView.GestureRecognizers>
+
+                                        <TapGestureRecognizer NumberOfTapsRequired="1"
+                                                              Command="{Binding Source={RelativeSource
+                                                                AncestorType={x:Type vm:ProductDetailViewModel}}, Path=SizeCommand}"
+                                                              CommandParameter="{Binding .}" />
+
+                                    </pv:PancakeView.GestureRecognizers>
+
+                                </pv:PancakeView>
+
+                            </ContentView>
+
+                        </DataTemplate>
+
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+
+                <Label Text="{Binding Description}"
+                       Style="{StaticResource SmallSecondaryLabelStyle}"
+                       Margin="15, 0, 15, 0" />
+
+                <Label Text="{x:Static res:AppResources.RelatedItems}"
+                       Style="{StaticResource BoldMediumPrimaryLabelStyle}"
+                       Margin="15, 5, 15, 5" />
+
+                <CollectionView ItemsSource="{Binding RelatedItems}"
+                                SelectionMode="None"
+                                HeightRequest="250"
+                                Margin="15,0,15,0"
+                                HorizontalScrollBarVisibility="Never">
+
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal" />
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <custom:ProductCard />
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+
+                <ContentView HeightRequest="90"/>
+
+            </StackLayout>
+
+        </ScrollView>
+
+        <pv:PancakeView Style="{StaticResource ButtonPanelStyle}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression
+                            Type=RelativeToParent, Property=Width, Factor=1}"
+                        RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent, Property=Height, Factor=1,
+                            Constant=-90}">
+
+            <Grid ColumnDefinitions="Auto, Auto, *, 120"
+                  ColumnSpacing="0"
+                  RowSpacing="0"
+                  HeightRequest="50">
+
+                <Label Text="{x:Static md:Icons.LocalOffer}"
+                       IsVisible="{Binding OnSale}"
+                       TextColor="Green"
+                       FontFamily="Material"
+                       FontSize="40"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       Grid.Column="0"/>
+
+                <Label Text="{Binding DiscountRate, StringFormat='%{0}'}"
+                       IsVisible="{Binding OnSale}"
+                       TextColor="White"
+                       FontSize="12"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       Grid.Column="0"/>
+
+                <StackLayout Grid.Column="1"
+                             Spacing="0">
+
+                    <Label Text="{Binding Price, StringFormat='${0:F2}'}"
+                           Style="{StaticResource LargePrimaryLabelStyle}"
+                           VerticalOptions="CenterAndExpand"
+                           VerticalTextAlignment="Center" />
+
+                    <Label Text="{Binding RegularPrice, StringFormat='${0:F2}'}"
+                           IsVisible="{Binding OnSale}"
+                           Style="{StaticResource SmallSecondaryLabelStyle}"
+                           TextDecorations="Strikethrough"
+                           HorizontalTextAlignment="End" />
+
+                </StackLayout>
+
+                <ImageButton Grid.Column="2"
+                             HorizontalOptions="Start"
+                             Margin="10, 0, 0, 0"
+                             Command="{Binding FavoriteCommand}"
+                             Clicked="FavoriteChanged"
+                             BackgroundColor="Transparent">
+
+                    <ImageButton.Source>
+
+                        <FontImageSource Glyph="{Binding IsFavorite, Converter={StaticResource FavoriteConverter}}"
+                                         FontFamily="Material"
+                                         Color="{AppThemeBinding Light={StaticResource PrimaryColorLight},
+                                            Dark={StaticResource PrimaryColorDark}}"
+                                         Size="40" />
+
+                    </ImageButton.Source>
+
+                </ImageButton>
+
+                <Button Style="{StaticResource PrimaryButtonStyle}"
+                        Text="{x:Static res:AppResources.AddCart}"
+                        Command="{Binding AddToCartCommand}"
+                        Grid.Column="3"
+                        Clicked="QuantityChanged" />
+
+                <pv:PancakeView x:Name="pvQuantity"
+                                CornerRadius="15, 15, 15, 15"
+                                Margin="-15, 0, 0, 0"
+                                BackgroundColor="{AppThemeBinding Light={StaticResource PrimaryColorLight},
+                                    Dark={StaticResource PrimaryColorDark}}"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Center"
+                                WidthRequest="30"
+                                HeightRequest="30"
+                                IsVisible="{Binding HasAddedCart}"
+                                Grid.Column="3">
+
+                    <pv:PancakeView.Border>
+
+                        <pv:Border Color="{AppThemeBinding Light={StaticResource CardColorLight},
+                                        Dark={StaticResource CardColorDark}}"
+                                   Thickness="2" />
+
+                    </pv:PancakeView.Border>
+
+                    <Label Text="{Binding QtyInCart}"
+                           TextColor="{AppThemeBinding Light={StaticResource TextColorOnPrimaryLight},
+                                Dark={StaticResource TextColorOnPrimaryDark}}"
+                           FontSize="Micro"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center" />
+
+                </pv:PancakeView>
+
+            </Grid>
+
+        </pv:PancakeView>
+
+    </RelativeLayout>
+
+</ContentPage>

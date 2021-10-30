@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="EcommerceTemplate.Themes.DeepOrangeTheme">
+
+    <!-- Material Palette Deep Orange -->
+
+    <Color x:Key="PrimaryColorLight">#F4511E</Color> <!-- 600 -->
+    <Color x:Key="PrimaryColorDark">#FF3D00</Color>  <!-- A400 -->
+
+    <Color x:Key="PrimaryLightColor">#FF7043</Color> <!-- 400 -->
+
+    <Color x:Key="TextColorOnPrimaryLight">#EEEEEE</Color>
+    <Color x:Key="TextColorOnPrimaryDark">#212121</Color>
+
+</ResourceDictionary>

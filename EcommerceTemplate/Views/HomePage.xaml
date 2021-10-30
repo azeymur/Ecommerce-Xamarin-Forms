@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EcommerceTemplate.Views.HomePage"
+             xmlns:vm="clr-namespace:EcommerceTemplate.ViewModels"
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:model="clr-namespace:EcommerceTemplate.Models"
+             xmlns:ctrl="clr-namespace:EcommerceTemplate.Controls"
+             xmlns:customview="clr-namespace:EcommerceTemplate.CustomViews"
+             xmlns:res="clr-namespace:EcommerceTemplate.Resources"
+             xmlns:cvc="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+             BackgroundColor="{AppThemeBinding Dark={StaticResource BackgroundColorDark},
+                Light={StaticResource BackgroundColorLight}}"
+             Title="{x:Static res:AppResources.YourBrand}">
+
+    <Shell.SearchHandler>
+
+        <ctrl:ProductSearchHandler Placeholder="{x:Static res:AppResources.EnterSearchTerm}"
+                                   ShowsResults="true">
+
+            <ctrl:ProductSearchHandler.ItemTemplate>
+
+                <DataTemplate>
+
+                    <Label Text="{Binding Name}"
+                           Style="{StaticResource MediumSecondaryLabelStyle}"
+                           VerticalTextAlignment="Center"
+                           Padding="10" />
+
+                </DataTemplate>
+
+            </ctrl:ProductSearchHandler.ItemTemplate>
+
+        </ctrl:ProductSearchHandler>
+
+    </Shell.SearchHandler>
+
+    <RefreshView x:DataType="vm:HomeViewModel"
+                 Command="{Binding LoadPageCommand}"
+                 IsRefreshing="{Binding IsBusy, Mode=TwoWay}"
+                 Padding="5">
+
+        <ScrollView Padding="10">
+
+            <StackLayout Spacing="15">
+
+                <StackLayout Orientation="Horizontal">
+
+                    <Label Text="{x:Static res:AppResources.FeaturedItems}"
+                           Style="{StaticResource BoldMediumSecondaryLabelStyle}"
+                           HorizontalOptions="StartAndExpand"
+                           VerticalOptions="Center" />
+
+                </StackLayout>
+
+                <CollectionView ItemsSource="{Binding FeaturedItems}"
+                                SelectionMode="None"
+                                HeightRequest="250"
+                                HorizontalScrollBarVisibility="Never">
+
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal" />
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.ItemTemplate>
+
+                        <DataTemplate>
+                            <customview:ProductCard />
+                        </DataTemplate>
+
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+
+                <StackLayout Orientation="Horizontal">
+
+                    <Label Text="{x:Static res:AppResources.PopularItems}"
+                           Style="{StaticResource BoldMediumSecondaryLabelStyle}"
+                           HorizontalOptions="StartAndExpand"
+                           VerticalOptions="Center" />
+
+                </StackLayout>
+
+                <CollectionView ItemsSource="{Binding PopularItems}"
+                                SelectionMode="None"
+                                HeightRequest="250"
+                                HorizontalScrollBarVisibility="Never">
+
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal" />
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.ItemTemplate>
+
+                        <DataTemplate>
+                            <customview:ProductCard />
+                        </DataTemplate>
+
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+
+                <StackLayout Orientation="Horizontal">
+
+                    <Label Text="{x:Static res:AppResources.NewItems}"
+                           Style="{StaticResource BoldMediumSecondaryLabelStyle}"
+                           HorizontalOptions="StartAndExpand"
+                           VerticalOptions="Center" />
+
+                </StackLayout>
+
+                <CollectionView ItemsSource="{Binding NewItems}"
+                                SelectionMode="None"
+                                HeightRequest="250"
+                                HorizontalScrollBarVisibility="Never">
+
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal" />
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.ItemTemplate>
+
+                        <DataTemplate>
+                            <customview:ProductCard />
+                        </DataTemplate>
+
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+
+            </StackLayout>
+
+        </ScrollView>
+
+    </RefreshView>
+
+</ContentPage>

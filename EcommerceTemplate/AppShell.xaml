@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:EcommerceTemplate.Views"
+       xmlns:md="clr-namespace:EcommerceTemplate.MaterialDesign"
+       xmlns:res="clr-namespace:EcommerceTemplate.Resources"
+       Title="EcommerceTemplate"
+       x:Class="EcommerceTemplate.AppShell">
+
+    <!--
+        The overall app visual hierarchy is defined here, along with navigation.
+        https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/
+    -->
+
+    <Shell.Resources>
+
+        <Style x:Key="BaseStyle" TargetType="Element">
+
+            <Setter Property="Shell.BackgroundColor"
+                    Value="{AppThemeBinding Light={StaticResource TabBarBackgroundColorLight},
+                        Dark={StaticResource TabBarBackgroundColorDark}}" />
+
+            <Setter Property="Shell.ForegroundColor"
+                    Value="{AppThemeBinding Light={StaticResource PrimaryTextColorLight},
+                        Dark={StaticResource PrimaryTextColorDark}}" />
+
+            <Setter Property="Shell.TitleColor"
+                    Value="{AppThemeBinding Light={StaticResource PrimaryTextColorLight},
+                        Dark={StaticResource PrimaryTextColorDark}}" />
+
+            <Setter Property="Shell.TabBarTitleColor"
+                    Value="{AppThemeBinding Light={StaticResource PrimaryColorLight},
+                        Dark={StaticResource PrimaryColorDark}}" />
+
+        </Style>
+
+        <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+
+    </Shell.Resources>
+
+
+    <TabBar Route="tabbar">
+
+        <Tab Title="{x:Static res:AppResources.Home}" Route="home">
+            <Tab.Icon>
+                <FontImageSource FontFamily="MaterialOutlined" Glyph="{x:Static md:Icons.Home}" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate views:HomePage}" />
+        </Tab>
+
+    </TabBar>
+
+</Shell>

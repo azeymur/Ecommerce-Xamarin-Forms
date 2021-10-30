@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:vm="clr-namespace:EcommerceTemplate.ViewModels"
+    xmlns:md="clr-namespace:EcommerceTemplate.MaterialDesign"
+    xmlns:template="clr-namespace:EcommerceTemplate.ControlTemplates"
+    x:Class="EcommerceTemplate.CustomViews.ProductCard"
+    x:DataType="vm:ProductViewModel"
+    Padding="0,0,15,0">
+
+        <pv:PancakeView CornerRadius="20, 20, 20, 20"
+                        BackgroundColor="{AppThemeBinding Light={StaticResource CardColorLight},
+                            Dark={StaticResource CardColorDark}}">
+
+            <Grid RowDefinitions="*, 2*, *, 2*"
+                  ColumnDefinitions="55, 55, 55"
+                  ColumnSpacing="0"
+                  RowSpacing="0"
+                  VerticalOptions="FillAndExpand">
+
+            <Image Source="{Binding FirstImage}"
+                   Aspect="AspectFill"
+                   Grid.ColumnSpan="3"
+                   Grid.RowSpan="3"/>
+
+            <Label Text="{x:Static md:Icons.Favorite}"
+                   IsVisible="{Binding IsFavorite}"
+                   TextColor="{AppThemeBinding Light={StaticResource PrimaryColorLight},
+                        Dark={StaticResource PrimaryColorDark}}"
+                   FontFamily="Material"
+                   FontSize="30"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   Grid.Column="2"
+                   Grid.Row="0"/>
+
+            <Label Text="{x:Static md:Icons.LocalOffer}"
+                   IsVisible="{Binding OnSale}"
+                   TextColor="Green"
+                   FontFamily="Material"
+                   FontSize="30"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="2"/>
+
+            <Label Text="%"
+                   IsVisible="{Binding OnSale}"
+                   TextColor="White"
+                   FontSize="Micro"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="2"/>
+
+            <StackLayout Grid.Row="3"
+                         Grid.ColumnSpan="2"
+                         Padding="5"
+                         Spacing="0">
+
+                <template:RatingStars Rating="{Binding AverageRating}"
+                                      ControlTemplate="{StaticResource RatingStarsControlTemplate}"/>
+
+                <Label Text="{Binding Name}"
+                       Style="{StaticResource SmallSecondaryLabelStyle}"
+                       HeightRequest="36"
+                       LineBreakMode="WordWrap"
+                       MaxLines="2"
+                       HorizontalOptions="FillAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"/>
+
+                <StackLayout Orientation="Vertical" Spacing="0">
+
+                    <Label Text="{Binding Price, StringFormat='${0:F2}'}"
+                            Style="{StaticResource BoldSmallSecondaryLabelStyle}"
+                            MaxLines="1"
+                            HorizontalTextAlignment="Center" />
+
+                </StackLayout>
+
+            </StackLayout>
+
+            <pv:PancakeView CornerRadius="6, 0, 6, 0"
+                            Grid.Column="2"
+                            Grid.Row="3"
+                            IsVisible="{Binding IsComplex}">
+
+            <Button HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Command="{Binding AddToCartCommand}"
+                    CommandParameter="{Binding .}"
+                    BackgroundColor="{AppThemeBinding Light={StaticResource PrimaryColorLight},
+                        Dark={StaticResource PrimaryColorDark}}"
+                    CornerRadius="0"
+                    Text="{x:Static md:Icons.AddShoppingCart}"
+                    TextColor="{AppThemeBinding Light={StaticResource TextColorOnPrimaryLight},
+                        Dark={StaticResource TextColorOnPrimaryDark}}"
+                    FontFamily="Material"
+                    FontSize="25"
+                    Clicked="QuantityChanged"/>
+
+            </pv:PancakeView>
+
+                <pv:PancakeView CornerRadius="6, 0, 6, 0"
+                                Grid.Column="2" Grid.Row="3"
+                                IsVisible="{Binding IsSimple}">
+
+                    <Label HorizontalOptions="FillAndExpand"
+                           VerticalOptions="FillAndExpand"
+                           BackgroundColor="{AppThemeBinding Light={StaticResource PrimaryColorLight},
+                                Dark={StaticResource PrimaryColorDark}}"
+                           Text="{x:Static md:Icons.ChevronRight}"
+                           TextColor="{AppThemeBinding Light={StaticResource TextColorOnPrimaryLight},
+                                Dark={StaticResource TextColorOnPrimaryDark}}"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           FontFamily="Material"
+                           FontSize="25"/>
+
+                </pv:PancakeView>
+
+                <pv:PancakeView x:Name="pvQuantity" x:FieldModifier="public"
+                                CornerRadius="15, 15, 15, 15"
+                                Margin="0, -15, 0, 0"
+                                Grid.Column="2" Grid.Row="3"
+                                BackgroundColor="{AppThemeBinding Light={StaticResource PrimaryColorLight},
+                                    Dark={StaticResource PrimaryColorDark}}"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Start"
+                                WidthRequest="30"
+                                HeightRequest="30"
+                                IsVisible="{Binding HasAddedCart}">
+
+                    <pv:PancakeView.Border>
+
+                        <pv:Border Color="{AppThemeBinding Light={StaticResource TextColorOnPrimaryLight},
+                                        Dark={StaticResource TextColorOnPrimaryDark}}"
+                                    Thickness="2"/>
+
+                    </pv:PancakeView.Border>
+
+                <Label Text="{Binding QtyInCart}"
+                       TextColor="{AppThemeBinding Light={StaticResource TextColorOnPrimaryLight},
+                            Dark={StaticResource TextColorOnPrimaryDark}}"
+                       FontSize="Small"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"/>
+
+            </pv:PancakeView>
+
+            <Grid.GestureRecognizers>
+
+                <TapGestureRecognizer NumberOfTapsRequired="1"
+                                      Command="{Binding ItemTappedCommand}"		
+                                      CommandParameter="{Binding .}"/>
+
+            </Grid.GestureRecognizers>
+
+        </Grid>
+
+    </pv:PancakeView>
+
+</ContentView>

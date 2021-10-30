@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+
+	<data name="YourBrand">
+		<value>Zeymur Store</value>
+    </data>
+
+	<data name="EnterSearchTerm">
+		<value>Enter search term</value>
+    </data>
+	
+	<data name="Home">
+		<value>Home</value>
+    </data>
+	
+	<data name="Cart">
+		<value>Cart</value>
+    </data>
+
+	<data name="MyAccount">
+		<value>My Account</value>
+    </data>
+
+	<data name="FeaturedItems">
+		<value>Featured Items</value>
+    </data>
+
+	<data name="ShowAll">
+		<value>Show All</value>
+    </data>
+
+	<data name="PopularItems">
+		<value>Popular Items</value>
+    </data>
+
+	<data name="NewItems">
+		<value>New Items</value>
+    </data>
+
+	<data name="Filters">
+		<value>Filters</value>
+    </data>
+
+	<data name="Categories">
+		<value>Categories</value>
+    </data>
+
+	<data name="Tags">
+		<value>Tags</value>
+    </data>
+
+	<data name="Colors">
+		<value>Colors</value>
+    </data>
+
+	<data name="Materials">
+		<value>Materials</value>
+    </data>
+
+	<data name="OK">
+		<value>OK</value>
+    </data>
+
+	<data name="Cancel">
+		<value>Cancel</value>
+    </data>
+
+	<data name="Apply">
+		<value>Apply</value>
+    </data>
+
+	<data name="Clear">
+		<value>Clear</value>
+    </data>
+
+	<data name="AllFilters">
+		<value> all filters.</value>
+    </data>
+
+	<data name="Total">
+		<value>Total</value>
+    </data>
+
+	<data name="Checkout">
+		<value>Checkout</value>
+    </data>
+
+	<data name="ShoppingCart">
+		<value>Shopping Cart</value>
+    </data>
+
+	<data name="YourCartEmpty">
+		<value>Your cart is empty.</value>
+    </data>
+
+	<data name="Favorites">
+		<value>Favorites</value>
+    </data>
+
+	<data name="Orders">
+		<value>Orders</value>
+    </data>
+
+	<data name="Addresses">
+		<value>Addresses</value>
+    </data>
+
+	<data name="ChangePassword">
+		<value>Change Password</value>
+    </data>
+
+	<data name="Shipping">
+		<value>Shipping</value>
+    </data>
+
+	<data name="GrandTotal">
+		<value>Grand Total</value>
+    </data>
+
+	<data name="Title">
+		<value>Title</value>
+    </data>
+
+	<data name="FirstName">
+		<value>First Name</value>
+    </data>
+
+	<data name="LastName">
+		<value>LastName</value>
+    </data>
+
+	<data name="Company">
+		<value>Company</value>
+    </data>
+
+	<data name="AddressLine1">
+		<value>Address Line 1</value>
+    </data>
+
+	<data name="AddressLine2">
+		<value>Address Line 2</value>
+    </data>
+
+	<data name="City">
+		<value>City</value>
+    </data>
+
+	<data name="State">
+		<value>State</value>
+    </data>
+
+	<data name="PostCode">
+		<value>Post Code</value>
+    </data>
+
+	<data name="Country">
+		<value>Country</value>
+    </data>
+
+	<data name="Phone">
+		<value>Phone</value>
+    </data>
+
+	<data name="Save">
+		<value>Save</value>
+    </data>
+
+	<data name="FullName">
+		<value>Full Name</value>
+    </data>
+
+	<data name="Username">
+		<value>Username</value>
+    </data>
+
+	<data name="Email">
+		<value>Email</value>
+    </data>
+
+	<data name="CurrentPassword">
+		<value>Current Password</value>
+    </data>
+
+	<data name="NewPassword">
+		<value>New Password</value>
+    </data>
+
+	<data name="ConfirmNewPassword">
+		<value>Confirm New Password</value>
+    </data>
+
+	<data name="WelcomeLogIn">
+		<value>Welcome Back, Log In!</value>
+    </data>
+
+	<data name="Password">
+		<value>Password</value>
+    </data>
+
+	<data name="RememberMe">
+		<value>Remember Me</value>
+    </data>
+
+	<data name="ForgotPassword">
+		<value>Forgot password?</value>
+    </data>
+
+	<data name="DontHaveAccount">
+		<value>Don't have an coount? </value>
+    </data>
+
+	<data name="SignUp">
+		<value>Sign Up</value>
+    </data>
+
+	<data name="LogIn">
+		<value>Log In</value>
+    </data>
+
+	<data name="HelloSignUp">
+		<value>Hello, Sign Up!</value>
+    </data>
+
+	<data name="ConfirmPassword">
+		<value>Confirm Password</value>
+    </data>
+
+	<data name="ByClickingSignUp">
+		<value>By clicking Sign Up you are in agreement of the</value>
+    </data>
+
+	<data name="TermsConditions">
+		<value> Terms and Conditions.</value>
+    </data>
+
+	<data name="AlreadyHaveAccount">
+		<value>Already have an account? </value>
+    </data>
+
+	<data name="ResetMyPassword">
+		<value>Reset My Password</value>
+    </data>
+
+	<data name="PleaseTypeYourEmail">
+		<value>Please type your email then tap the Submit button. We will send an email to reset your password.</value>
+    </data>
+
+	<data name="Submit">
+		<value>Submit</value>
+    </data>
+
+	<data name="ShowReviews">
+		<value>Show Reviews</value>
+    </data>
+
+	<data name="RelatedItems">
+		<value>Related Items</value>
+    </data>
+
+	<data name="AddCart">
+		<value>Add to Cart</value>
+    </data>
+
+	<data name="YourRating">
+		<value>Your Rating</value>
+    </data>
+
+	<data name="YourReviewOptional">
+		<value>Your Review (Optional)</value>
+    </data>
+
+	<data name="Add">
+		<value>Add</value>
+    </data>
+
+	<data name="Edit">
+		<value>Edit</value>
+    </data>
+
+	<data name="NoItems">
+		<value>No items to display.</value>
+    </data>
+
+	<data name="Payment">
+		<value>Payment</value>
+    </data>
+
+	<data name="Congratulations">
+		<value>Congratulations!</value>
+    </data>
+
+	<data name="YourOrderReceived">
+		<value>Your order has been successfully received.</value>
+    </data>
+
+	<data name="Continue">
+		<value>Continue</value>
+    </data>
+
+	<data name="CardOwnersName">
+		<value>Card Owner's Name</value>
+    </data>
+
+	<data name="CardNumber">
+		<value>Card Number</value>
+    </data>
+
+	<data name="Month">
+		<value>Month</value>
+    </data>
+
+	<data name="Year">
+		<value>Year</value>
+    </data>
+
+	<data name="Cvc">
+		<value>CVC</value>
+    </data>
+
+	<data name="ShipTo">
+		<value>Ship to </value>
+    </data>
+
+	<data name="CompleteOrder">
+		<value>Complete Order</value>
+    </data>
+
+	<data name="LogOut">
+		<value>Log Out</value>
+    </data>
+
+	<data name="AccountDetails">
+		<value>Account Details</value>
+    </data>
+
+	<data name="Question">
+		<value>Question</value>
+    </data>
+
+	<data name="No">
+		<value>No</value>
+    </data>
+
+	<data name="Yes">
+		<value>Yes</value>
+    </data>
+
+	<data name="DoYouWantDeleteAddress">
+		<value>Do you want to delete this address?</value>
+    </data>
+
+	<data name="DoYouWantDeleteAllItems">
+		<value>Do you want to delete all items?</value>
+    </data>
+
+	<data name="Addresses">
+		<value>Addresses</value>
+    </data>
+
+	<data name="Categories">
+		<value>Categories</value>
+    </data>
+
+	<data name="ShippingAddress">
+		<value>Shipping Address</value>
+    </data>
+
+	<data name="NewRating">
+		<value>New Rating</value>
+    </data>
+
+	<data name="Products">
+		<value>Products</value>
+    </data>
+
+	<data name="Ratings">
+		<value>Ratings</value>
+    </data>
+
+	<data name="Retry">
+		<value>Retry</value>
+    </data>
+
+	<data name="Error">
+		<value>Error</value>
+    </data>
+
+	<data name="Info">
+		<value>Info</value>
+    </data>
+
+	<data name="EditPhotoTapped">
+		<value>Edit photo tapped.</value>
+    </data>
+
+	<data name="ButtonTapped">
+		<value>Button tapped.</value>
+    </data>
+
+</root>

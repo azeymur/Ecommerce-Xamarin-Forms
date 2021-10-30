@@ -1,0 +1,39 @@
+﻿<Properties StartupConfiguration="{B9FE51AF-C615-40ED-A23F-376406484569}|Default">
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="EcommerceTemplate" expanded="True">
+            <Node name="EcommerceTemplate" expanded="True">
+              <Node name="Controls" expanded="True" />
+              <Node name="ControlTemplates" expanded="True" />
+              <Node name="Converters" expanded="True" />
+              <Node name="CustomViews" expanded="True" />
+              <Node name="DataStores" expanded="True">
+                <Node name="MockDataStore" expanded="True" />
+              </Node>
+              <Node name="Fonts" expanded="True" />
+              <Node name="MaterialDesign" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Resources" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="Themes" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True" />
+              <Node name="App.xaml" expanded="True" />
+              <Node name="AppShell.xaml" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.EcommerceTemplate.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.ADFC84E6-D14E-4DE2-BFD6-FF3E1D8956C2" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.EcommerceTemplate.Android PreferredExecutionTarget="Android.Pixel_5_API_31" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,61 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.3.0.759" />
+    <PackageReference Include="CarouselView.FormsPlugin" Version="6.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fonts\" />
+    <Folder Include="Themes\" />
+    <Folder Include="CustomViews\" />
+    <Folder Include="Controls\" />
+    <Folder Include="Converters\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Services\" />
+    <Folder Include="Models\" />
+    <Folder Include="MaterialDesign\" />
+    <Folder Include="DataStores\" />
+    <Folder Include="ControlTemplates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Fonts\MaterialIcons-Regular.ttf" />
+    <None Remove="Fonts\MaterialIconsOutlined-Regular.otf" />
+    <None Remove="CustomViews\" />
+    <None Remove="PhotoBrowser.Forms" />
+    <None Remove="System.Linq.Dynamic.Core" />
+    <None Remove="Helper\" />
+    <None Remove="Controls\" />
+    <None Remove="Converters\" />
+    <None Remove="ViewModels\" />
+    <None Remove="Resources\" />
+    <None Remove="Services\" />
+    <None Remove="Models\" />
+    <None Remove="MaterialDesign\" />
+    <None Remove="DataStores\" />
+    <None Remove="ControlTemplates\" />
+    <None Remove="CarouselView.FormsPlugin" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fonts\MaterialIcons-Regular.ttf" />
+    <EmbeddedResource Include="Fonts\MaterialIconsOutlined-Regular.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Resources\AppResources.Designer.cs">
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Condition=" '$(EnableDefaultEmbeddedResourceItems)' == 'true' " Update="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

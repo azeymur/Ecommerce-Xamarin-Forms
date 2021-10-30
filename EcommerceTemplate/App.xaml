@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="EcommerceTemplate.App">
+    <!--
+        Define global resources and styles here, that apply to all pages in your app.
+    -->
+    <Application.Resources>
+        <ResourceDictionary Source="Themes/DeepOrangeTheme.xaml">
+
+            <Color x:Key="BackgroundColorLight">#F2F2F2</Color>
+            <Color x:Key="BackgroundColorDark">#212121</Color>
+
+            <Color x:Key="TabBarBackgroundColorLight">#FAFAFA</Color>
+            <Color x:Key="TabBarBackgroundColorDark">#212121</Color>
+
+            <Color x:Key="CardColorLight">White</Color>
+            <Color x:Key="CardColorDark">#424242</Color>
+
+            <Color x:Key="PrimaryTextColorLight">#212121</Color> <!-- Gray 900 -->
+            <Color x:Key="PrimaryTextColorDark">#EEEEEE</Color> <!-- Gray 200 -->
+
+            <Color x:Key="SecondaryTextColorLight">#616161</Color> <!-- Gray 700 -->
+            <Color x:Key="SecondaryTextColorDark">#E0E0E0</Color> <!-- Gray 300 -->
+
+            <Color x:Key="TertiaryTextColorLight">#424242</Color> <!-- Gray 800 -->
+            <Color x:Key="TertiaryTextColorDark">#BDBDBD</Color> <!-- Gray 400 ->-->
+
+            <!-- TextColor Label -->
+
+            <Style x:Key="PrimaryLabelStyle" TargetType="Label">
+                <Setter Property="TextColor"
+                        Value="{AppThemeBinding Light={StaticResource PrimaryTextColorLight},
+                                    Dark={StaticResource PrimaryTextColorDark}}" />
+            </Style>
+
+            <Style x:Key="SecondaryLabelStyle" TargetType="Label">
+                <Setter Property="TextColor"
+                        Value="{AppThemeBinding Light={StaticResource SecondaryTextColorLight},
+                                    Dark={StaticResource SecondaryTextColorDark}}" />
+            </Style>
+
+            <Style x:Key="TertiaryLabelStyle" TargetType="Label">
+                <Setter Property="TextColor"
+                        Value="{AppThemeBinding Light={StaticResource TertiaryTextColorLight},
+                                    Dark={StaticResource TertiaryTextColorDark}}" />
+            </Style>
+
+            <!-- FontAttribute Label -->
+
+            <Style x:Key="BoldLabelStyle" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style x:Key="BoldPrimaryLabelStyle" TargetType="Label"
+                   BasedOn="{StaticResource PrimaryLabelStyle}">
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style x:Key="BoldSecondaryLabelStyle" TargetType="Label"
+                   BasedOn="{StaticResource SecondaryLabelStyle}">
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <!-- FontSize Label -->
+
+            <Style x:Key="SmallLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="Small" />
+            </Style>
+
+            <Style x:Key="BoldSmallLabelStyle" TargetType="Label"
+                   BasedOn="{StaticResource SmallLabelStyle}">
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+             
+            <Style x:Key="MicroPrimaryLabelStyle" TargetType="Label"
+                   BasedOn="{StaticResource PrimaryLabelStyle}">
+                <Setter Property="FontSize" Value="Micro" />
+            </Style>
+
+            <Style x:Key="MicroSecondaryLabelStyle" TargetType="Label"
+                   BasedOn="{StaticResource SecondaryLabelStyle}">
+                <Setter Property="FontSize" Value="Micro" />
+            </Style>
+
+            <Style x:Key="BoldMicroSecondaryLabelStyle" TargetType="Label"
+                   BasedOn="{StaticResource MicroSecondaryLabelStyle}">
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style x:Key="SmallPrimaryLabelStyle" TargetType="Label"
+                   BasedOn="{StaticResource PrimaryLabelStyle}">
+                <Setter Property="FontSize" Value="Small" />
+            </Style>
+
+            <Style x:Key="SmallSecondaryLabelStyle" TargetType="Label"
+                   BasedOn="{StaticResource SecondaryLabelStyle}">
+                <Setter Property="FontSize" Value="Small" />
+            </Style>
+
+            <Style x:Key="SmallTertiaryLabelStyle" TargetType="Label"
+                   BasedOn="{StaticResource SecondaryLabelStyle}">
+                <Setter Property="FontSize" Value="Small" />
+            </Style>
+
+            <Style x:Key="BoldSmallSecondaryLabelStyle" TargetType="Label"
+                   BasedOn="{StaticResource SmallSecondaryLabelStyle}">
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style x:Key="MediumPrimaryLabelStyle" TargetType="Label"
+                   BasedOn="{StaticResource PrimaryLabelStyle}">
+                <Setter Property="FontSize" Value="Medium" />
+            </Style>
+
+            <Style x:Key="BoldMediumPrimaryLabelStyle" TargetType="Label"
+                   BasedOn="{StaticResource MediumPrimaryLabelStyle}">
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style x:Key="MediumSecondaryLabelStyle" TargetType="Label"
+                   BasedOn="{StaticResource SecondaryLabelStyle}">
+                <Setter Property="FontSize" Value="Medium" />
+            </Style>
+
+            <Style x:Key="BoldMediumSecondaryLabelStyle" TargetType="Label"
+                   BasedOn="{StaticResource MediumSecondaryLabelStyle}">
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style x:Key="MediumTertiaryLabelStyle" TargetType="Label"
+                   BasedOn="{StaticResource TertiaryLabelStyle}">
+                <Setter Property="FontSize" Value="Medium" />
+            </Style>
+
+            <Style x:Key="BoldMediumTertiaryLabelStyle" TargetType="Label"
+                   BasedOn="{StaticResource MediumTertiaryLabelStyle}">
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+
+            <Style x:Key="TitlePrimaryLabelStyle" TargetType="Label"
+                   BasedOn="{StaticResource PrimaryLabelStyle}">
+                <Setter Property="FontSize" Value="Title" />
+            </Style>
+
+            <Style x:Key="BoldTitlePrimaryLabelStyle" TargetType="Label"
+                   BasedOn="{StaticResource TitlePrimaryLabelStyle}">
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style x:Key="TitleSecondaryLabelStyle" TargetType="Label"
+                   BasedOn="{StaticResource SecondaryLabelStyle}">
+                <Setter Property="FontSize" Value="Title" />
+            </Style>
+
+            <Style x:Key="LargePrimaryLabelStyle" TargetType="Label"
+                   BasedOn="{StaticResource PrimaryLabelStyle}">
+                <Setter Property="FontSize" Value="Large" />
+            </Style>
+
+            <Style x:Key="LargeSecondaryLabelStyle" TargetType="Label"
+                   BasedOn="{StaticResource SecondaryLabelStyle}">
+                <Setter Property="FontSize" Value="Large" />
+            </Style>
+
+            <!-- Button Panel Pancake -->
+
+            <Style x:Key="ButtonPanelStyle" TargetType="pv:PancakeView">
+                <Setter Property="BackgroundColor"
+                        Value="{AppThemeBinding Light={StaticResource CardColorLight},
+                                            Dark={StaticResource CardColorDark}}" />
+                <Setter Property="CornerRadius" Value="40, 40, 0, 0" />
+                <Setter Property="Padding" Value="20" />
+                <Setter Property="Shadow">
+                    <Setter.Value>
+                        <pv:DropShadow />
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!-- Primary Button -->
+
+            <Style x:Key="PrimaryButtonStyle" TargetType="Button">
+                <Setter Property="TextColor"
+                        Value="{AppThemeBinding Light={StaticResource TextColorOnPrimaryLight},
+                                    Dark={StaticResource TextColorOnPrimaryDark}}" />
+                <Setter Property="CornerRadius" Value="20" />
+                <Setter Property="FontAttributes" Value="Bold"/>
+                    
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <LinearGradientBrush StartPoint="0.5, 1" EndPoint="0.5, 0">
+                            <GradientStop Color="{AppThemeBinding Light={StaticResource PrimaryColorLight},
+                                                    Dark={StaticResource PrimaryColorDark}}" Offset="0.0" />
+                            <GradientStop Color="{AppThemeBinding Light={StaticResource PrimaryLightColor},
+                                                    Dark={StaticResource PrimaryColorDark}}" Offset="1.0" />
+
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!-- Secondary Button -->
+
+            <Style x:Key="SecondaryButtonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource PrimaryColorLight},
+                                                        Dark={StaticResource PrimaryColorDark}}" />
+                <Setter Property="CornerRadius" Value="20" />
+                <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource PrimaryColorLight},
+                                                        Dark={StaticResource PrimaryColorDark}}" />
+                <Setter Property="BorderWidth" Value="2" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+            </Style>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>
