@@ -1,6 +1,5 @@
-# EcommerceTemplate
-<h4>E-Commerce User Interface Template for Xamarin.Forms</h4>
-<p>There is a mock data source and service in the project. So you can run the application immediately to test without doing anything.</p>
+# E-Commerce UI Template for Xamarin.Forms
+<p>This project is a user interface template developed using Xamarin Forms. There is a mock data source and service in the project. So you can run the application immediately to test without doing anything.</p>
 <img src='https://res.cloudinary.com/dqwntkvge/image/upload/v1635620212/ss_git_deep_orange.png'/>
  
 
