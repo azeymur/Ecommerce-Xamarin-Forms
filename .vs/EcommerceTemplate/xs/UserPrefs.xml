@@ -2,6 +2,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.EcommerceTemplate.Android PreferredExecutionTarget="Android.Pixel_4_API_32" />
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="12.3.3.3" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -10,7 +11,7 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="EcommerceTemplate" expanded="True">
+          <Node name="EcommerceTemplate" expanded="True" selected="True">
             <Node name="EcommerceTemplate" expanded="True">
               <Node name="Controls" expanded="True" />
               <Node name="Converters" expanded="True" />
@@ -23,7 +24,6 @@
               <Node name="Resources" expanded="True" />
               <Node name="Services" expanded="True" />
               <Node name="ViewModels" expanded="True" />
-              <Node name="Views" expanded="True" />
             </Node>
           </Node>
         </State>
