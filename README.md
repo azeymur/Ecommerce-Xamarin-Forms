@@ -1,4 +1,4 @@
-# E-Commerce UI Template for Xamarin.Forms
+# E-Commerce App UI Template for Xamarin.Forms
 <p>This project is a user interface template developed using Xamarin Forms. There is a mock data source and service in the project. So you can run the application immediately to test without doing anything.</p>
 <img src='https://res.cloudinary.com/dqwntkvge/image/upload/v1636741996/ss_ecommerce.png'/>
  
