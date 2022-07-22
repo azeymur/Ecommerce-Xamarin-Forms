@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pQcTLVabLfrVyxbZf0pg3NzHrK1ugb7UPPLHGdDO8b6JAHwT/gShya1IR+APzf+JVseNRoHLziu98EnkdM2l1A==",
+  "dgSpecHash": "UpbqK/DyRTArIw/G68hsqzHCN1LnqrbX9naixTPwBFlliJ5Kdwp8OOgFWCY2lhC856lt9ivRwZh+7nE7jyN86A==",
   "success": true,
-  "projectFilePath": "/Users/ahmetzekieymur/Documents/VisualStudio/EcommerceTemplate/github/EcommerceTemplate.iOS/EcommerceTemplate.iOS.csproj",
+  "projectFilePath": "/Users/ahmetzekieymur/Documents/VisualStudio/XFormsUiEcommerce/github/EcommerceTemplate.iOS/EcommerceTemplate.iOS.csproj",
   "expectedPackageFiles": [
     "/Users/ahmetzekieymur/.nuget/packages/carouselview.formsplugin/6.0.0/carouselview.formsplugin.6.0.0.nupkg.sha512",
     "/Users/ahmetzekieymur/.nuget/packages/system.componentmodel/4.3.0/system.componentmodel.4.3.0.nupkg.sha512",

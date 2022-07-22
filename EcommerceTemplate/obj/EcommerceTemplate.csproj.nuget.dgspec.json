@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ahmetzekieymur/Documents/VisualStudio/EcommerceTemplate/github/EcommerceTemplate/EcommerceTemplate.csproj": {}
+    "/Users/ahmetzekieymur/Documents/VisualStudio/XFormsUiEcommerce/github/EcommerceTemplate/EcommerceTemplate.csproj": {}
   },
   "projects": {
-    "/Users/ahmetzekieymur/Documents/VisualStudio/EcommerceTemplate/github/EcommerceTemplate/EcommerceTemplate.csproj": {
+    "/Users/ahmetzekieymur/Documents/VisualStudio/XFormsUiEcommerce/github/EcommerceTemplate/EcommerceTemplate.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ahmetzekieymur/Documents/VisualStudio/EcommerceTemplate/github/EcommerceTemplate/EcommerceTemplate.csproj",
+        "projectUniqueName": "/Users/ahmetzekieymur/Documents/VisualStudio/XFormsUiEcommerce/github/EcommerceTemplate/EcommerceTemplate.csproj",
         "projectName": "EcommerceTemplate",
-        "projectPath": "/Users/ahmetzekieymur/Documents/VisualStudio/EcommerceTemplate/github/EcommerceTemplate/EcommerceTemplate.csproj",
+        "projectPath": "/Users/ahmetzekieymur/Documents/VisualStudio/XFormsUiEcommerce/github/EcommerceTemplate/EcommerceTemplate.csproj",
         "packagesPath": "/Users/ahmetzekieymur/.nuget/packages/",
-        "outputPath": "/Users/ahmetzekieymur/Documents/VisualStudio/EcommerceTemplate/github/EcommerceTemplate/obj/",
+        "outputPath": "/Users/ahmetzekieymur/Documents/VisualStudio/XFormsUiEcommerce/github/EcommerceTemplate/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/ahmetzekieymur/.config/NuGet/NuGet.Config"
@@ -71,7 +71,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.402/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/ahmetzekieymur/Library/Caches/VisualStudio/17.0/MSBuild/9357_3/RuntimeIdentifierGraph.json"
         }
       }
     }

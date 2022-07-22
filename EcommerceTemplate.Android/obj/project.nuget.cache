@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sdk72jC6zHfSNDX8n9NbA5vYRhbEFO+3zKRxSEh4QTibOijxYJmzff7fIpsnkaFAzKS1g3m4mKgK9AdzHtZHTA==",
+  "dgSpecHash": "Mir+rnJlMRLZZ5vOPsYaPlwQwKZBAEBgoYhX3VusijnXKNXTyXm4/LXUt4LXq2mHEO0X7ZroyydF0Miw4nGolQ==",
   "success": true,
-  "projectFilePath": "/Users/ahmetzekieymur/Documents/VisualStudio/EcommerceTemplate/github/EcommerceTemplate.Android/EcommerceTemplate.Android.csproj",
+  "projectFilePath": "/Users/ahmetzekieymur/Documents/VisualStudio/XFormsUiEcommerce/github/EcommerceTemplate.Android/EcommerceTemplate.Android.csproj",
   "expectedPackageFiles": [
     "/Users/ahmetzekieymur/.nuget/packages/carouselview.formsplugin/6.0.0/carouselview.formsplugin.6.0.0.nupkg.sha512",
     "/Users/ahmetzekieymur/.nuget/packages/system.componentmodel/4.3.0/system.componentmodel.4.3.0.nupkg.sha512",

@@ -3389,11 +3389,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ahmetzekieymur/Documents/VisualStudio/EcommerceTemplate/github/EcommerceTemplate.Android/EcommerceTemplate.Android.csproj",
+      "projectUniqueName": "/Users/ahmetzekieymur/Documents/VisualStudio/XFormsUiEcommerce/github/EcommerceTemplate.Android/EcommerceTemplate.Android.csproj",
       "projectName": "EcommerceTemplate.Android",
-      "projectPath": "/Users/ahmetzekieymur/Documents/VisualStudio/EcommerceTemplate/github/EcommerceTemplate.Android/EcommerceTemplate.Android.csproj",
+      "projectPath": "/Users/ahmetzekieymur/Documents/VisualStudio/XFormsUiEcommerce/github/EcommerceTemplate.Android/EcommerceTemplate.Android.csproj",
       "packagesPath": "/Users/ahmetzekieymur/.nuget/packages/",
-      "outputPath": "/Users/ahmetzekieymur/Documents/VisualStudio/EcommerceTemplate/github/EcommerceTemplate.Android/obj/",
+      "outputPath": "/Users/ahmetzekieymur/Documents/VisualStudio/XFormsUiEcommerce/github/EcommerceTemplate.Android/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -3408,8 +3408,8 @@
       "frameworks": {
         "monoandroid11.0": {
           "projectReferences": {
-            "/Users/ahmetzekieymur/Documents/VisualStudio/EcommerceTemplate/github/EcommerceTemplate/EcommerceTemplate.csproj": {
-              "projectPath": "/Users/ahmetzekieymur/Documents/VisualStudio/EcommerceTemplate/github/EcommerceTemplate/EcommerceTemplate.csproj"
+            "/Users/ahmetzekieymur/Documents/VisualStudio/XFormsUiEcommerce/github/EcommerceTemplate/EcommerceTemplate.csproj": {
+              "projectPath": "/Users/ahmetzekieymur/Documents/VisualStudio/XFormsUiEcommerce/github/EcommerceTemplate/EcommerceTemplate.csproj"
             }
           }
         }

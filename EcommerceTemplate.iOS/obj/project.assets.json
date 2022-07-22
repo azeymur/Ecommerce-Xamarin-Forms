@@ -1258,11 +1258,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ahmetzekieymur/Documents/VisualStudio/EcommerceTemplate/github/EcommerceTemplate.iOS/EcommerceTemplate.iOS.csproj",
+      "projectUniqueName": "/Users/ahmetzekieymur/Documents/VisualStudio/XFormsUiEcommerce/github/EcommerceTemplate.iOS/EcommerceTemplate.iOS.csproj",
       "projectName": "EcommerceTemplate.iOS",
-      "projectPath": "/Users/ahmetzekieymur/Documents/VisualStudio/EcommerceTemplate/github/EcommerceTemplate.iOS/EcommerceTemplate.iOS.csproj",
+      "projectPath": "/Users/ahmetzekieymur/Documents/VisualStudio/XFormsUiEcommerce/github/EcommerceTemplate.iOS/EcommerceTemplate.iOS.csproj",
       "packagesPath": "/Users/ahmetzekieymur/.nuget/packages/",
-      "outputPath": "/Users/ahmetzekieymur/Documents/VisualStudio/EcommerceTemplate/github/EcommerceTemplate.iOS/obj/",
+      "outputPath": "/Users/ahmetzekieymur/Documents/VisualStudio/XFormsUiEcommerce/github/EcommerceTemplate.iOS/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -1277,8 +1277,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "/Users/ahmetzekieymur/Documents/VisualStudio/EcommerceTemplate/github/EcommerceTemplate/EcommerceTemplate.csproj": {
-              "projectPath": "/Users/ahmetzekieymur/Documents/VisualStudio/EcommerceTemplate/github/EcommerceTemplate/EcommerceTemplate.csproj"
+            "/Users/ahmetzekieymur/Documents/VisualStudio/XFormsUiEcommerce/github/EcommerceTemplate/EcommerceTemplate.csproj": {
+              "projectPath": "/Users/ahmetzekieymur/Documents/VisualStudio/XFormsUiEcommerce/github/EcommerceTemplate/EcommerceTemplate.csproj"
             }
           }
         }
