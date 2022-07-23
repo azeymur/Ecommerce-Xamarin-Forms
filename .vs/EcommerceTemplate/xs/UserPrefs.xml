@@ -1,12 +1,7 @@
 ﻿<Properties StartupConfiguration="{B9FE51AF-C615-40ED-A23F-376406484569}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.EcommerceTemplate.Android PreferredExecutionTarget="Android.Pixel_4_API_32" />
-  <MonoDevelop.MonoDroid LastDeploySdkVersion="12.3.3.3" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.Pixel_4_API_32" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
@@ -33,6 +28,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.EcommerceTemplate.Android PreferredExecutionTarget="Android.Pixel_4_API_32" />
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="12.3.3.3" />
   <MonoDevelop.Ide.ItemProperties.EcommerceTemplate.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>
