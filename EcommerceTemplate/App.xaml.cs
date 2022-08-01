@@ -10,7 +10,10 @@ namespace EcommerceTemplate
         {
             InitializeComponent();
 
+            DependencyService.RegisterSingleton(new BannerDataStore());
+            DependencyService.RegisterSingleton(new CategoryDataStore());
             DependencyService.RegisterSingleton(new RatingDataStore());
+            DependencyService.RegisterSingleton(new CustomerDataStore());
             DependencyService.RegisterSingleton(new FavoriteDataStore());
             DependencyService.RegisterSingleton(new CartItemDataStore());
             DependencyService.RegisterSingleton(new ProductDataStore());

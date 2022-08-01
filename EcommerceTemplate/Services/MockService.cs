@@ -12,11 +12,21 @@ namespace EcommerceTemplate.Services
     /// </summary>
     public class MockService : IService
     {
+        ICategoryDataStore dataCategory => DependencyService.Get<ICategoryDataStore>();
+        ICustomerDataStore dataCustomer = DependencyService.Get<ICustomerDataStore>();
         ICartItemDataStore dataCartItem => DependencyService.Get<ICartItemDataStore>();
         IProductDataStore dataProduct => DependencyService.Get<IProductDataStore>();
         IRatingDataStore dataRating => DependencyService.Get<IRatingDataStore>();
         IFavoriteDataStore dataFavorite => DependencyService.Get<IFavoriteDataStore>();
         IVariantDataStore dataVariant => DependencyService.Get<IVariantDataStore>();
+        IBannerDataStore dataBanner => DependencyService.Get<IBannerDataStore>();
+
+        // Methods for Customer entity
+
+        public async Task<Customer> GetCustomerAsync(string id)
+        {
+            return await dataCustomer.GetAsync(id);
+        }
 
         // Methods for CartItem entity
 
@@ -58,6 +68,15 @@ namespace EcommerceTemplate.Services
             return await Task.FromResult(result);
         }
 
+        // Methods for Category entity
+
+        public async Task<IEnumerable<Category>> GetCategoriesAsync(string name)
+        {
+            var result = await dataCategory.GetByAsync(i => name == null || i.Name.Contains(name));
+
+            return await Task.FromResult(result);
+        }
+
         // Methods for Product entity
 
         public async Task<Product> GetProductAsync(string id)
@@ -88,6 +107,13 @@ namespace EcommerceTemplate.Services
                                 }).Where(p => (onlyFavorite == false || p.IsFavorite == true));
 
             return await Task.FromResult(result);
+        }
+
+        // Methods for Banner entity
+
+        public async Task<IEnumerable<Banner>> GetBannersAsync()
+        {
+            return await dataBanner.GetAllAsync();
         }
 
         // Methods for Favorite entity

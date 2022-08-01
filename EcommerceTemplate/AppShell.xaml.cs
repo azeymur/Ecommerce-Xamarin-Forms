@@ -11,6 +11,7 @@ namespace EcommerceTemplate
             InitializeComponent();
 
             Routing.RegisterRoute(nameof(ProductDetailPage), typeof(ProductDetailPage));
+
         }
 
     }

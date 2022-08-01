@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:EcommerceTemplate.Views"
@@ -46,6 +46,13 @@
                 <FontImageSource FontFamily="MaterialOutlined" Glyph="{x:Static md:Icons.Home}" />
             </Tab.Icon>
             <ShellContent ContentTemplate="{DataTemplate views:HomePage}" />
+        </Tab>
+
+        <Tab Title="{x:Static res:AppResources.MyAccount}" Route="myaccount">
+            <Tab.Icon>
+                <FontImageSource FontFamily="MaterialOutlined" Glyph="{x:Static md:Icons.Person}" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate views:MyAccountPage}" />
         </Tab>
 
     </TabBar>

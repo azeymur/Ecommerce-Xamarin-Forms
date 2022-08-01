@@ -10,6 +10,14 @@ namespace EcommerceTemplate.Services
     /// </summary>
     public interface IService
     {
+
+        /// <summary>
+        /// Get customer by id
+        /// </summary>
+        /// <param name="id">Customer Id</param>
+        /// <returns>Customer object or null</returns>
+        Task<Customer> GetCustomerAsync(string id);
+
         /// <summary>
         /// Add the cart item
         /// </summary>
@@ -39,6 +47,13 @@ namespace EcommerceTemplate.Services
         Task<int> GetQuantityInCartAsync(string productId);
 
         /// <summary>
+        /// Get categories by name
+        /// </summary>
+        /// <param name="name">Keyword for category name</param>
+        /// <returns>List of categories filtered by name</returns>
+        Task<IEnumerable<Category>> GetCategoriesAsync(string name);
+
+        /// <summary>
         /// Get the product by id
         /// </summary>
         /// <param name="id">product id</param>
@@ -58,6 +73,12 @@ namespace EcommerceTemplate.Services
         Task<IEnumerable<Product>> GetProductsAsync(string[] productIds = null, string key = null,
                                               bool onlyFavorite = false, bool onlyNew = false,
                                               bool onlyFeatured = false, bool onlyPopular = false);
+
+        /// <summary>
+        /// Get list of all banners
+        /// </summary>
+        /// <returns>List of banner objects</returns>
+        Task<IEnumerable<Banner>> GetBannersAsync();
 
         /// <summary>
         /// Add the favorite

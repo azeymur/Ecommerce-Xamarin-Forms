@@ -1,0 +1,50 @@
+﻿<Properties StartupConfiguration="{CCB02D69-75B6-4B11-9605-80465F7429B7}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="12.3.3.3" />
+  <MultiItemStartupConfigurations />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6C955BEB-5B13-4411-9A03-4373CBB9F897" />
+  <MonoDevelop.Ide.ItemProperties.EcommerceTemplate.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6C955BEB-5B13-4411-9A03-4373CBB9F897" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="EcommerceTemplate/ViewModels/HomeViewModel.cs">
+    <Files>
+      <File FileName="EcommerceTemplate/ViewModels/HomeViewModel.cs" Line="15" Column="72" />
+      <File FileName="EcommerceTemplate/Views/HomePage.xaml" Line="47" Column="1" />
+      <File FileName="EcommerceTemplate.iOS/Main.cs" Line="14" Column="10" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="EcommerceTemplate" expanded="True">
+            <Node name="EcommerceTemplate" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Controls" expanded="True" />
+              <Node name="ControlTemplates" expanded="True" />
+              <Node name="Converters" expanded="True" />
+              <Node name="DataStores" expanded="True">
+                <Node name="MockDataStore" expanded="True" />
+              </Node>
+              <Node name="Fonts" expanded="True" />
+              <Node name="MaterialDesign" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Resources" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True" />
+              <Node name="App.xaml" expanded="True" />
+              <Node name="AppShell.xaml" expanded="True" />
+            </Node>
+            <Node name="EcommerceTemplate.iOS" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

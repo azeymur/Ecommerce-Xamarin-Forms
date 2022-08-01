@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EcommerceTemplate.Views.MyAccountPage"
+             xmlns:vm="clr-namespace:EcommerceTemplate.ViewModels"
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:md="clr-namespace:EcommerceTemplate.MaterialDesign"
+             xmlns:res="clr-namespace:EcommerceTemplate.Resources"
+             xmlns:template="clr-namespace:EcommerceTemplate.ControlTemplates"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             BackgroundColor="{AppThemeBinding Dark={StaticResource BackgroundColorDark},
+                Light={StaticResource BackgroundColorLight}}"
+             Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <vm:MyAccountViewModel />
+    </ContentPage.BindingContext>
+
+    <RelativeLayout>
+
+        <ScrollView RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                        Property=Width, Factor=1}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                        Property=Height, Factor=1}">
+
+            <StackLayout Padding="30"
+                         Spacing="10">
+
+                <pv:PancakeView CornerRadius="75, 75, 75, 75"
+                                WidthRequest="150"
+                                HeightRequest="150"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center">
+
+                    <pv:PancakeView.Border>
+
+                        <pv:Border Color="{AppThemeBinding Light={StaticResource CardColorLight},
+                                        Dark={StaticResource CardColorDark}}"
+                                   Thickness="5" />
+
+                    </pv:PancakeView.Border>
+
+                    <pv:PancakeView.Shadow>
+                        <pv:DropShadow />
+                    </pv:PancakeView.Shadow>
+
+                    <Image Source="{Binding CustomerImage}"
+                           Aspect="AspectFill" />
+
+                </pv:PancakeView>
+
+                <Label Text="{Binding CustomerName}"
+                       HorizontalTextAlignment="Center"
+                       Style="{StaticResource TitlePrimaryLabelStyle}"
+                       Margin="0, 0, 0, 20"/>
+
+                <template:ChicButton Text="{x:Static res:AppResources.Favorites}"
+                                     Icon="{x:Static md:Icons.Favorite}"
+                                     FetchCommand="{Binding FavoritesCommand}"
+                                     ControlTemplate="{StaticResource ChicButtonControlTemplate}" />
+
+                <template:ChicButton Text="{x:Static res:AppResources.Orders}"
+                                     Icon="{x:Static md:Icons.ShoppingBag}"
+                                     FetchCommand="{Binding OrdersCommand}"
+                                     ControlTemplate="{StaticResource ChicButtonControlTemplate}" />
+
+                <template:ChicButton Text="{x:Static res:AppResources.Addresses}"
+                                     Icon="{x:Static md:Icons.LocalShipping}"
+                                     FetchCommand="{Binding AddressesCommand}"
+                                     ControlTemplate="{StaticResource ChicButtonControlTemplate}" />
+
+                <template:ChicButton Text="{x:Static res:AppResources.AccountDetails}"
+                                     Icon="{x:Static md:Icons.Person}"
+                                     FetchCommand="{Binding DetailsCommand}"
+                                     ControlTemplate="{StaticResource ChicButtonControlTemplate}" />
+
+                <template:ChicButton Text="{x:Static res:AppResources.ChangePassword}"
+                                     Icon="{x:Static md:Icons.Lock}"
+                                     FetchCommand="{Binding ChangePasswordCommand}"
+                                     ControlTemplate="{StaticResource ChicButtonControlTemplate}" />
+
+                <ContentView HeightRequest="90"/>
+
+            </StackLayout>
+
+        </ScrollView>
+
+        <pv:PancakeView Style="{StaticResource ButtonPanelStyle}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression
+                            Type=RelativeToParent, Property=Width, Factor=1}"
+                        RelativeLayout.YConstraint="{ConstraintExpression
+                            Type=RelativeToParent, Property=Height, Factor=1,
+                            Constant=-90}">
+
+            <pv:PancakeView.Shadow>
+                <pv:DropShadow />
+            </pv:PancakeView.Shadow>
+
+            <Button Style="{StaticResource PrimaryButtonStyle}"
+                    Text="{x:Static res:AppResources.LogOut}"
+                    Command="{Binding LogoutCommand}"
+                    HeightRequest="50"/>
+
+        </pv:PancakeView>
+
+    </RelativeLayout>
+
+</ContentPage>

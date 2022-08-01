@@ -44,11 +44,122 @@
 
             <StackLayout Spacing="15">
 
+                <pv:PancakeView CornerRadius="20, 20, 20, 20">
+
+                    <Grid RowDefinitions="90,*,Auto"
+                          ColumnDefinitions="90,*,90"
+                          HeightRequest="150">
+
+                        <cvc:CarouselViewControl ItemsSource="{Binding Banners}"
+                                      Grid.RowSpan="3"
+                                      Grid.ColumnSpan="3"
+                                      ShowIndicators="True"
+                                      IndicatorsTintColor="{AppThemeBinding Light={StaticResource PrimaryColorLight},
+                                         Dark={StaticResource PrimaryColorDark}}">
+
+                            <cvc:CarouselViewControl.ItemTemplate>
+
+                                <DataTemplate x:DataType="model:Banner">
+
+                                    <Image Source="{Binding Image}"
+                                           Aspect="AspectFill">
+
+                                        <Image.GestureRecognizers>
+
+                                            <TapGestureRecognizer NumberOfTapsRequired="1"
+                                                                  Command="{Binding Source={RelativeSource
+                                                                    AncestorType={x:Type vm:HomeViewModel}}, Path=BannerCommand}"
+                                                                  CommandParameter="{Binding .}" />
+
+                                        </Image.GestureRecognizers>
+
+                                    </Image>
+
+                                </DataTemplate>
+
+                            </cvc:CarouselViewControl.ItemTemplate>
+
+                        </cvc:CarouselViewControl>
+
+                    </Grid>
+
+                </pv:PancakeView>
+
+                <CollectionView ItemsSource="{Binding Categories}"
+                                SelectionMode="None"
+                                HeightRequest="110"
+                                HorizontalScrollBarVisibility="Never">
+
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal" />
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.ItemTemplate>
+
+                        <DataTemplate>
+
+                            <ContentView Padding="0,0,15,0">
+
+                                <pv:PancakeView CornerRadius="20, 20, 20, 20"
+                                                BackgroundColor="{AppThemeBinding Light={StaticResource CardColorLight},
+                                                    Dark={StaticResource CardColorDark}}">
+
+                                    <Grid x:DataType="model:Category"
+                                          RowDefinitions="*, Auto"
+                                          RowSpacing="0">
+
+                                        <Image Source="{Binding Image}"
+                                               Aspect="AspectFill"
+                                               WidthRequest="110"
+                                               VerticalOptions="FillAndExpand"
+                                               HorizontalOptions="FillAndExpand"/>
+
+                                        <Label Text="{Binding Name}"
+                                               FontAttributes="Bold"
+                                               TextColor="{AppThemeBinding Light={StaticResource TextColorOnPrimaryLight},
+                                                    Dark={StaticResource TextColorOnPrimaryDark}}"
+                                               LineBreakMode="NoWrap"
+                                               FontSize="Small"
+                                               Grid.Row="1"
+                                               HorizontalTextAlignment="Center"
+                                               Padding="5"
+                                               BackgroundColor="{AppThemeBinding Light={StaticResource PrimaryColorLight},
+                                                    Dark={StaticResource PrimaryColorDark}}"/>
+
+                                        <Grid.GestureRecognizers>
+
+                                            <TapGestureRecognizer NumberOfTapsRequired="1"
+                                                                  Command="{Binding Source={RelativeSource
+                                                                    AncestorType={x:Type vm:HomeViewModel}}, Path=CategoryCommand}"		
+                                                                  CommandParameter="{Binding .}" />
+
+                                        </Grid.GestureRecognizers>
+
+                                    </Grid>
+
+                                </pv:PancakeView>
+
+                            </ContentView>
+
+                        </DataTemplate>
+
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+
                 <StackLayout Orientation="Horizontal">
 
                     <Label Text="{x:Static res:AppResources.FeaturedItems}"
                            Style="{StaticResource BoldMediumSecondaryLabelStyle}"
                            HorizontalOptions="StartAndExpand"
+                           VerticalOptions="Center" />
+
+                    <Label Text="{x:Static res:AppResources.ShowAll}"
+                           TextColor="{AppThemeBinding Light={StaticResource PrimaryColorLight},
+                                Dark={StaticResource PrimaryColorDark}}"
+                           TextDecorations="Underline"
+                           FontSize="Medium"
+                           HorizontalOptions="End"
                            VerticalOptions="Center" />
 
                 </StackLayout>
@@ -79,6 +190,14 @@
                            HorizontalOptions="StartAndExpand"
                            VerticalOptions="Center" />
 
+                    <Label Text="{x:Static res:AppResources.ShowAll}"
+                           TextColor="{AppThemeBinding Light={StaticResource PrimaryColorLight},
+                                Dark={StaticResource PrimaryColorDark}}"
+                           TextDecorations="Underline"
+                           FontSize="Medium"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center" />
+
                 </StackLayout>
 
                 <CollectionView ItemsSource="{Binding PopularItems}"
@@ -105,6 +224,14 @@
                     <Label Text="{x:Static res:AppResources.NewItems}"
                            Style="{StaticResource BoldMediumSecondaryLabelStyle}"
                            HorizontalOptions="StartAndExpand"
+                           VerticalOptions="Center" />
+
+                    <Label Text="{x:Static res:AppResources.ShowAll}"
+                           TextColor="{AppThemeBinding Light={StaticResource PrimaryColorLight},
+                                Dark={StaticResource PrimaryColorDark}}"
+                           TextDecorations="Underline"
+                           FontSize="Medium"
+                           HorizontalOptions="End"
                            VerticalOptions="Center" />
 
                 </StackLayout>
